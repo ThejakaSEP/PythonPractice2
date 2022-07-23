@@ -29,3 +29,26 @@ ceaser_cypher("cheer",7)
 
 # Part-2) Binary Search Algorithm Implementation in Python (mark 30%)
 
+def binary_search(myList,num):
+    while True:
+        mid = int(len(myList)/2)
+        print(mid)
+        if num == myList[mid]:
+            print('Number Found')
+            return True
+        elif num < myList[mid]:
+            myList = myList[0:mid]
+        elif num > myList[mid]:
+            myList = myList[mid+1:len(myList)]
+            print("Okay")
+        else:
+            print('Number Not Found')
+            return False
+        # return True
+
+numberList = [1,2,3,4,5,6,7]
+
+binary_search(numberList,78)
+
+
+def binary_search(myList,num):
